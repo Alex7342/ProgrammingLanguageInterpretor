@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a7.MainWindowController">
+   <center>
+      <ListView id="exeStackListView" fx:id="exeStackListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <ListView id="outputTableListView" fx:id="outputTableListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <ListView id="fileTableListView" fx:id="fileTableListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <TableView id="heapTableTableView" fx:id="heapTableTableView" prefHeight="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="addressColumn" prefWidth="50.0" text="address" />
+          <TableColumn fx:id="valueColumn" prefWidth="200.0" text="value" />
+        </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField id="numberOfProgramStatesTextField" fx:id="numberOfProgramStatesTextField" alignment="CENTER" />
+            <ListView id="programStatesListView" fx:id="programStatesListView" onMouseClicked="#onListItemSelection" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="oneStepForAllButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onButtonClick" text="Run one step!" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
